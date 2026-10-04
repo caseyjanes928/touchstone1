@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Contact | North Star Bakery</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -34,13 +35,15 @@
         <p>Location: 62 Gardenia St, Midland City</p>
     </section>
 
-    <form action="#" method="post">
+    <form id="contact-form" action="#" method="post" novalidate>
 
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
+        <p class="error-message" id="name-error" aria-live="polite"></p>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
+        <p class="error-message" id="email-error" aria-live="polite"></p>
 
         <fieldset>
             <legend>What can we help you with?</legend>
@@ -62,6 +65,7 @@
 
         <label for="item-details">Item Details:</label>
         <textarea id="item-details" name="item-details" rows="5" required></textarea>
+        <p class="error-message" id="item-details-error" aria-live="polite"></p>
 
         <label for="allergy-notes">Allergy Notes (optional):</label>
         <textarea id="allergy-notes" name="allergy-notes" rows="4"></textarea>
