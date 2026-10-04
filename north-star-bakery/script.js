@@ -92,6 +92,10 @@ function clearErrors() {
 }
 
 function validateContactForm(event) {
+    // This student project does not have a server to receive form submissions,
+    // so keep the form on the page after validation instead of sending a POST request.
+    event.preventDefault();
+
     const form = event.currentTarget;
     const name = form.querySelector("#name");
     const email = form.querySelector("#email");
@@ -116,8 +120,8 @@ function validateContactForm(event) {
         isValid = false;
     }
 
-    if (!isValid) {
-        event.preventDefault();
+    if (isValid) {
+        alert("Thanks! Your request passed validation. This demo form does not send information to a server.");
     }
 }
 
