@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Products | North Star Bakery</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -23,23 +24,32 @@
 
     <main>
 
+    <section class="favorites-box">
+        <h2>Your Bakery Favorites</h2>
+        <p>Save products you are interested in so you can remember them when you come back.</p>
+        <p id="favorites-list" aria-live="polite">You have not saved any favorites yet.</p>
+    </section>
+
     <section>
         <h2>Breads</h2>
         <p>Our breads are made with care and baked fresh for our neighborhood customers. Choose from classic loaves and our signature breads.</p>
         <p>Pricing range: $4–$8</p>
         <img src="media/bakery-bread.jpg" alt="Freshly baked artisan bread from North Star Bakery">
+        <button type="button" class="favorite-button" data-product="bread">Add to Favorites</button>
     </section>
 
     <section>
         <h2>Pastries</h2>
         <p>Enjoy flaky, freshly baked pastries made for breakfast, snacks, or a sweet treat.</p>
         <p>Pricing range: $3–$6</p>
+        <button type="button" class="favorite-button" data-product="pastries">Add to Favorites</button>
     </section>
 
     <section>
         <h2>Cakes</h2>
         <p>Our handcrafted cakes are made for birthdays, celebrations, and special gatherings. Ask us about flavors and custom options.</p>
         <p>Pricing range: $25–$60</p>
+        <button type="button" class="favorite-button" data-product="cakes">Add to Favorites</button>
     </section>
 
     <section>
